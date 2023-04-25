@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+arrContains() {
+    local str="$1"
+    shift
+
+    for arg in "$@"
+    do
+        if [[ $arg == $str ]]; then
+            return 0
+        fi
+    done
+
+    return 1
+}
